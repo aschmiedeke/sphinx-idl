@@ -178,7 +178,7 @@ class IDLAutoPath(IDLAutoBase):
                 include_file = self.read(file)
                 for obj in self.get_idl_objects(include_file):
                     body.append(self.get_row(*self.handle_idl_object_table(obj)))
-        for file in sorted(glob.glob(path)):
+        for file in reversed(sorted(glob.glob(path))):
             autofile = IDLAutoFile(
                 self.name,
                 [file],  # arguments
