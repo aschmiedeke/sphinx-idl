@@ -228,7 +228,7 @@ class IDLObject(IDLObjectBase):
         if self.display_prefix:
             signode += addnodes.desc_annotation(self.display_prefix, self.display_prefix)
 
-        signode += addnodes.desc_annotation(self.objtype, self.objtype)
+        signode += addnodes.desc_annotation(self.objtype + " ", self.objtype + " ")
 
         # Register the full name of the program
         signode["fullname"] = name
